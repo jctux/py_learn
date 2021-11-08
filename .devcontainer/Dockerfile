@@ -22,7 +22,7 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 WORKDIR /home/vscode
 RUN apt update \
     && apt install stow vim zsh tmux git -y \
-    && git clone https://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@github.com/juanmtz79/dotfiles \
+    && git clone https://github.com/juanmtz79/dotfiles \
     && cd /home/vscode/dotfiles/ \
     && sudo -H -u vscode bash -c './bootstrap.sh' \
     && chsh -s /bin/zsh vscode \
